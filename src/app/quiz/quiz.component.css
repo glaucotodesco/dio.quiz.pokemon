@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 70%;
+    height: 100%;
+    margin: 10px;
+    background-color: darkcyan;
+    color: white;
+    border: solid 3px black;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.title > p{
+    margin: 5px;
+}
+.pokemon-img > img{
+    width: 200px;
+    position: relative;
+    z-index: 10; /* Sit on top */
+}
+
+.quiz-option{
+    width: 95%;
+    text-align: center;
+    background-color: cadetblue;
+    padding-top: 8px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.message {
+    text-align: center;
+    height: 120px;
+}
+
+.off {
+    background-color: gray;
+    color:lightgray;
+    box-shadow:none;
+}
+
+.parallelogram {
+	width: 480px;
+	height: 100px;
+	transform: skew(-40deg);
+	background: #555;
+    margin: auto;
+    position: absolute;
+    top:250px;
+    opacity: 0.8;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #000;
+    border-width: 6px;
+}

@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="title">
+        <p>What is the pokemon name?</p>
+        <p>Score: {{times}}/{{score}}</p>
+    </div>
+
+    <div class="parallelogram"></div>
+    <div *ngIf="correct" class="pokemon-img">
+        <img [src]="getImage()">
+
+    </div>
+
+    <h4>Id : {{correct?.id}}</h4>
+    <div class="quiz-option">
+        <h1>Make your choice:</h1>
+        <button (click)="onSelect(pokemons[0].id)" [class.off]="success || fail"
+            [disabled]="success || fail">{{pokemons[0].name | titlecase | slice:0:14}}</button>
+        <button (click)="onSelect(pokemons[1].id)" [class.off]="success || fail"
+            [disabled]="success || fail">{{pokemons[1].name | titlecase | slice:0:14}}</button>
+        <button (click)="onSelect(pokemons[2].id)" [class.off]="success || fail"
+            [disabled]="success || fail">{{pokemons[2].name | titlecase | slice:0:14}}</button>
+        <button (click)="onSelect(pokemons[3].id)" [class.off]="success || fail"
+            [disabled]="success || fail">{{pokemons[3].name | titlecase | slice:0:14}}</button>
+    </div>
+    <button (click)="loadPokemons()">Próximo</button>
+    <div class="message">
+        <div *ngIf="success">
+            <h1>You're right, congratulations!</h1>
+        </div>
+        <div *ngIf="fail">
+            <h1>You failed, it's {{correct?.name | titlecase | slice:0:14}}!</h1>
+        </div>
+    </div>
+
+
+</div>
